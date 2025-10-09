@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Weather App</title>
+    <link rel="stylesheet" href="file.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Погода</h1>
+
+        <div class="search-box">
+            <input type="text" id="city-input" placeholder="Введите город...">
+            <button id="search-btn">Поиск</button>
+        </div>
+
+        <div class="loading" id="loading" style="display: none;">
+            Loading...
+        </div>
+
+        <div class="weather-card" id="weather-card" style="display: none;">
+            <div class="country">Country</div>
+            <div class="city">City</div>
+            <div class="temperature">0°C</div>
+            <div class="weather-description">Description</div>
+            <div class="icon-weather">
+                <img id="weather-icon" src="" alt="Weather">
+            </div>
+            <div class="details">
+                <div class="detail">
+                    <span>Влажность:</span>
+                    <span id="humidity">0%</span>
+                </div>
+                <div class="detail">
+                    <span>Скорость ветра:</span>
+                    <span id="wind">0 m/s</span>
+                </div>
+                <div class="detail">
+                    <span>Ощущается как:</span>
+                    <span id="feelsLike">0°C</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="error-message" id="error-message" style="display: none;">
+            City not found. Check the name and try again!
+        </div>
+    </div>
+
+    <script src="file.js"></script>
+</body>
+</html>

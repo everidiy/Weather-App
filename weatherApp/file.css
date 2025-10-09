@@ -1,0 +1,268 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #8fb3e2;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background-color: #d9e1f1;
+    border-radius: 20px;
+    box-shadow: 0 0px 35px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    transition: all 0.5s;
+}
+
+.container:hover {
+    background-color: #e1e6f3;
+}
+
+h1 {
+    background: linear-gradient(135deg, #648dc2 0%, #1b439a 100%);
+    color: white;
+    margin-bottom: 30px;
+    font-size: 32px;
+    font-weight: bold;
+    padding: 15px 30px;
+    border-radius: 15px;
+    box-shadow: 8px 8px 16px #c3cad8, 
+                -8px -8px 16px #eff8ff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#city-input {
+    flex: 1;
+    padding: 12px 15px;
+    border-radius: 10px;
+    border: 2px solid #192338;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s;
+    box-shadow: 8px 8px 16px #c3cad8, 
+                -8px -8px 16px #eff8ff;
+}
+
+#city-input:focus {
+    border-color: #8fb3e2;
+}
+
+#search-btn {
+    padding: 12px 20px;
+    border-radius: 10px;
+    border: none;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.5s;
+    box-shadow: 8px 8px 16px #c3cad8, 
+                -8px -8px 16px #eff8ff;
+}
+
+#search-btn:hover {
+    background-color: #8fb3e2;
+}
+
+.loading {
+    color: #192338;
+    margin: 20px;
+    font-size: 18px;
+}
+
+.weather-card {
+    background: linear-gradient(135deg, #648dc2 0%, #1b439a 100%);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 8px 8px 16px #c3cad8, 
+                -8px -8px 16px #eff8ff;
+}
+
+.country {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.city {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.temperature {
+    font-size: 48px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.weather-description {
+    font-size: 18px;
+    text-transform: capitalize;
+}
+
+.weather-icon img {
+    width: 80px;
+    height: 80px;
+    margin: 10px 0;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.detail {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.error-message {
+    background: linear-gradient(135deg, #648dc2 0%, #1b439a 100%);
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.weather-clear {
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.8) 0%, rgba(255, 140, 0, 0.8) 100%);
+}
+
+.weather-clouds {
+    background: linear-gradient(135deg, rgba(189, 195, 199, 0.8) 0%, rgba(44, 62, 80, 0.8) 100%);
+}
+
+.weather-rain {
+    background: linear-gradient(135deg, rgba(44, 62, 80, 0.8) 0%, rgba(52, 152, 219, 0.8) 100%);
+}
+
+.weather-snow {
+    background: linear-gradient(135deg, rgba(230, 240, 255, 0.8) 0%, rgba(179, 209, 255, 0.8) 100%);
+    color: #192338;
+}
+
+.weather-thunderstorm {
+    background: linear-gradient(135deg, rgba(44, 62, 80, 0.8) 0%, rgba(142, 68, 173, 0.8) 100%);
+}
+
+.weather-mist {
+    background: linear-gradient(135deg, rgba(149, 165, 166, 0.8) 0%, rgba(127, 140, 141, 0.8) 100%);
+    color: #192338;
+}
+
+
+
+.body-clear {
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.8) 0%, rgba(255, 140, 0, 0.8) 100%),
+    url('images/sunny.png')
+}
+
+.body-clouds {
+    background: linear-gradient(135deg, rgba(189, 195, 199, 0.8) 0%, rgba(44, 62, 80, 0.8) 100%),
+    url('images/cloudy.png');
+}
+
+.body-rain {
+    background: linear-gradient(135deg, rgba(44, 62, 80, 0.8) 0%, rgba(52, 152, 219, 0.8) 100%),
+    url('images/rain.png');
+}
+
+.body-snow {
+    background: linear-gradient(135deg, rgba(230, 240, 255, 0.8) 0%, rgba(179, 209, 255, 0.8) 100%),
+    url('images/snow.png');
+}
+
+.body-thunderstorm {
+    background: linear-gradient(135deg, rgba(44, 62, 80, 0.8) 0%, rgba(142, 68, 173, 0.8) 100%),
+    url('images/thunder.png');
+}
+
+.body-mist {
+    background: linear-gradient(135deg, rgba(149, 165, 166, 0.8) 0%, rgba(127, 140, 141, 0.8) 100%),
+    url('images/mist.png');
+}
+
+
+
+
+.h1-clear {
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.8) 0%, rgba(255, 140, 0, 0.8) 100%);
+}
+
+.h1-clouds {
+    background: linear-gradient(135deg, rgba(189, 195, 199, 0.8) 0%, rgba(44, 62, 80, 0.8) 100%);
+}
+
+.h1-rain {
+    background: linear-gradient(135deg, rgba(44, 62, 80, 0.8) 0%, rgba(52, 152, 219, 0.8) 100%);
+}
+
+.h1-snow {
+    background: linear-gradient(135deg, rgba(230, 240, 255, 0.8) 0%, rgba(179, 209, 255, 0.8) 100%);
+    color: #192338;
+}
+
+.h1-thunderstorm {
+    background: linear-gradient(135deg, rgba(44, 62, 80, 0.8) 0%, rgba(142, 68, 173, 0.8) 100%);
+}
+
+.h1-mist {
+    background: linear-gradient(135deg, rgba(149, 165, 166, 0.8) 0%, rgba(127, 140, 141, 0.8) 100%);
+    color: #192338;
+}
+
+
+
+.button-clear {
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.8) 0%, rgba(255, 140, 0, 0.8) 100%);
+    color: white;
+}
+
+.button-clouds {
+    background: linear-gradient(135deg, rgba(189, 195, 199, 0.8) 0%, rgba(44, 62, 80, 0.8) 100%);
+    color: white;
+}
+
+.button-rain {
+    background: linear-gradient(135deg, rgba(44, 62, 80, 0.8) 0%, rgba(52, 152, 219, 0.8) 100%);
+    color: white;
+}
+
+.button-snow {
+    background: linear-gradient(135deg, rgba(230, 240, 255, 0.8) 0%, rgba(179, 209, 255, 0.8) 100%);
+    color: #192338;
+}
+
+.button-thunderstorm {
+    background: linear-gradient(135deg, rgba(44, 62, 80, 0.8) 0%, rgba(142, 68, 173, 0.8) 100%);
+    color: white;
+}
+
+.button-mist {
+    background: linear-gradient(135deg, rgba(149, 165, 166, 0.8) 0%, rgba(127, 140, 141, 0.8) 100%);
+    color: #192338;
+}
