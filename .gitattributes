@@ -1,0 +1,26 @@
+*.css text eol=lf
+*.html text eol=lf
+*.js text eol=lf
+*.md text eol=lf
+*.txt text eol=lf
+
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary
+
+.gitattributes text
+.gitignore text
+*.json text
+
+text=auto
+
+*.css linguist-language=CSS
+*.html linguist-language=HTML
+*.js linguist-language=JavaScript
+*.json linguist-language=JSON
+
+* -text
+*.sh text eol=lf
